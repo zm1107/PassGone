@@ -6,12 +6,12 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="PassGone — 完全离线的文档密码找回工具（Windows）。Office 全版本、PDF 与 zip/7z/rar 压缩包；字典 + 规则双引擎、断点续跑、多核并行、可选 GPU 加速。">
+<meta name="description" content="PassGone — 完全离线的文档密码找回工具（Windows）。10 种格式：Office 全版本、PDF 与 zip/7z/rar；GPU 实测最高提速约 2,670 倍，旧版 zip 每秒尝试 2 亿次。">
 <meta property="og:title" content="PassGone — 忘掉的是密码，找回来的是文件">
-<meta property="og:description" content="完全离线 · 字典 + 规则双引擎 · 断点续跑 · GPU 加速。Office 全版本 / PDF / 压缩包密码找回工具。">
+<meta property="og:description" content="10 种格式全覆盖 · GPU 实测最高 ≈2,670× 提速 · 旧版 zip 每秒 2 亿次尝试。完全离线的 Office / PDF / 压缩包密码找回工具。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://passgone.exifmate.com/">
-<title>PassGone — 文档密码找回工具 | 完全离线 · Windows</title>
+<title>PassGone — 文档密码找回工具 | 10 种格式 · GPU 提速最高约 2,670 倍</title>
 <link rel="canonical" href="https://passgone.exifmate.com/">
 <link rel="alternate" hreflang="zh-CN" href="https://passgone.exifmate.com/">
 <link rel="alternate" hreflang="en" href="https://passgone.exifmate.com/en/">
@@ -24,7 +24,7 @@
  "applicationCategory":"SecurityApplication",
  "url":"https://passgone.exifmate.com/","softwareVersion":"1.0.1",
  "inLanguage":["zh-CN","en"],
- "description":"Fully offline password recovery tool for Office documents, PDF and zip/7z/rar archives.",
+ "description":"Fully offline password recovery tool for Office documents, PDF and zip/7z/rar archives, with optional GPU acceleration.",
  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
  "screenshot":"https://passgone.exifmate.com/"}
 </script>
@@ -35,9 +35,10 @@
   <div class="container nav-inner">
     <a class="brand" href="/"><img src="/assets/img/logo.png" alt="PassGone">Pass<span class="dot">Gone</span></a>
     <div class="nav-links">
-      <a class="hide-sm" href="#pain">为什么需要</a>
-      <a class="hide-sm" href="#features">功能</a>
       <a class="hide-sm" href="#formats">支持格式</a>
+      <a class="hide-sm" href="#speed">GPU 提速</a>
+      <a class="hide-sm" href="#features">功能</a>
+      <a class="hide-sm" href="#pain">场景</a>
       <a class="hide-sm" href="#compare">版本对比</a>
       <span class="lang-switch"><b>中文</b> · <a href="/en/" hreflang="en" lang="en">English</a></span>
     </div>
@@ -48,26 +49,132 @@
   <div class="container">
     <img class="hero-logo" src="/assets/img/logo.png" alt="PassGone">
     <h1>忘掉的是密码，<br>找回来的是<span class="key">文件</span>。</h1>
-    <p class="pitch">完全离线的文档密码找回工具：Word / Excel / PPT 全版本、PDF，以及 zip / 7z / rar 压缩包。</p>
+    <p class="pitch">完全离线的文档密码找回工具：<b>10 种格式</b>全覆盖，GPU 实测最高提速<b>约 2,670 倍</b>。</p>
     <p class="sub">PassGone 完全离线运行，不联网、不收集任何信息——你的文件永远不出你的电脑。</p>
     <div class="platform-pills">
       <span class="pill">✔ Windows 10 / 11</span>
+      <span class="pill">✔ 10 种格式</span>
+      <span class="pill">✔ GPU 最高 ≈2,670×</span>
       <span class="pill">✔ 中英双语界面</span>
-      <span class="pill dim">GPU 加速 · 可选组件 hashcat</span>
     </div>
     <div class="btn-row">
       <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9PNQWBH3W67T">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         从微软商店免费下载
       </a>
-      <a class="btn btn-ghost" href="#compare">免费版 vs 完整版</a>
+      <a class="btn btn-ghost" href="#speed">看看实测有多快</a>
     </div>
   </div>
 </header>
 
 <main class="container">
 
-  <!-- ============ 痛点 ============ -->
+  <!-- ============ 支持格式 ============ -->
+  <section class="block" id="formats">
+    <h2 class="title">10 种格式，一个工具全覆盖</h2>
+    <p class="lead">Office 新旧两代加密、PDF 全系加密标准、常见压缩包——格式探测与找回开箱即用。</p>
+    <div class="fmt-grid">
+      <div class="fmt-chip">
+        <div class="f-ico f-word"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div><b>docx</b><small>Word · Agile 加密</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-word"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+        <div><b>doc</b><small>Word 97-2003 · RC4</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-xls"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg></div>
+        <div><b>xlsx</b><small>Excel · Agile 加密</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-xls"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/><path d="M15 3v18"/></svg></div>
+        <div><b>xls</b><small>Excel 97-2003 · RC4</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-ppt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div><b>pptx</b><small>PowerPoint · Agile 加密</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-ppt"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <div><b>ppt</b><small>PowerPoint 97-2003 · RC4</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-pdf"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div><b>PDF</b><small>RC4-40 · AES-128 · AES-256</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-arc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div>
+        <div><b>zip</b><small>ZipCrypto · AES</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-arc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div>
+        <div><b>7z</b><small>7z 压缩包</small></div>
+      </div>
+      <div class="fmt-chip">
+        <div class="f-ico f-arc"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="5" rx="1"/><path d="M4 8v11a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg></div>
+        <div><b>rar</b><small>需自备 UnRAR 后端</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GPU 实测速度 ============ -->
+  <section class="block" id="speed">
+    <h2 class="title">GPU 加速，快是可量化的</h2>
+    <p class="lead">同一台笔记本、同一批文件，开与不开 GPU 的实测对比。CPU 多核并行打底，一键启用可选组件 hashcat，提速立竿见影。</p>
+    <div class="stat-cards">
+      <div class="stat"><b>≈2,670×</b><span>GPU 实测最高提速（旧版 zip · ZipCrypto）</span></div>
+      <div class="stat"><b>200,000,000/s</b><span>旧版 zip（ZipCrypto）GPU 每秒尝试次数</span></div>
+      <div class="stat"><b>10 种</b><span>支持的文档与压缩包格式</span></div>
+    </div>
+    <div class="tbl-wrap">
+    <table class="bench">
+      <thead>
+        <tr><th>来源</th><th>格式 / 加密类型</th><th class="num">CPU 计算（平均）</th><th class="num col-gpu-h">GPU 计算（平均）</th><th class="num">提升</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>WPS 2016 Pro</td><td>doc（97-2003 RC4）</td><td class="num">64,135/s</td><td class="num col-gpu">48,000,000/s</td><td class="num spd">≈748×</td></tr>
+        <tr><td>WPS 2016 Pro</td><td>docx（标准加密）</td><td class="num">890/s</td><td class="num col-gpu">32,353/s</td><td class="num spd">≈36×</td></tr>
+        <tr><td>WinRAR 7.11</td><td>RAR（RAR5）</td><td class="num">2,100/s</td><td class="num col-gpu">10,760/s</td><td class="num spd">≈5×</td></tr>
+        <tr><td>WinRAR 7.11</td><td>zip 新版（WinZip AES）</td><td class="num">75,477/s</td><td class="num col-gpu">770,000/s</td><td class="num spd">≈10×</td></tr>
+        <tr><td>WinRAR</td><td>zip 旧版（ZipCrypto）</td><td class="num">74,896/s</td><td class="num col-gpu">200,000,000/s</td><td class="num spd">≈2,670×</td></tr>
+        <tr><td>Word 2024</td><td>doc（97-2003 RC4）</td><td class="num">72,333/s</td><td class="num col-gpu">20,800,000/s</td><td class="num spd">≈288×</td></tr>
+        <tr><td>Word 2024</td><td>docx（Agile 2013+）</td><td class="num">639/s</td><td class="num col-gpu">1,374/s</td><td class="num spd">≈2.2×</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="table-note">测试环境：ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T。实测数据因硬件与文件而异。</p>
+    <div class="bench-note">加密越轻（RC4 / ZipCrypto 这类无重迭代的设计），GPU 并行收益越大，可达数百到数千倍；带重迭代 KDF 的格式（Agile SHA512-10 万轮、RAR5 PBKDF2），GPU 收益约为 2-36×，但依然全面快于 CPU。GPU 加速依赖可选组件 hashcat，由用户自行提供。</div>
+  </section>
+
+  <!-- ============ 功能 ============ -->
+  <section class="block" id="features">
+    <h2 class="title">为「找回来」而生的完整引擎</h2>
+    <p class="lead">字典、规则、并行、断点——多种手段对付同一个忘掉的密码，直到把它找回来。</p>
+    <div class="feat-grid two">
+      <div class="feat">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>完全离线</h3>
+        <p>零联网、零账号、零遥测——隐私不是承诺，是架构。你添加的文件始终留在你自己的电脑上。</p>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <h3>字典 + 规则双引擎</h3>
+        <p>txt / csv 字典导入自动去重合并；字符集 × 长度区间规则生成，两种思路都能试。</p>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
+        <h3>断点续跑</h3>
+        <p>按文件指纹记录区块粒度进度，重启后自动续跑，绝不重复尝试。</p>
+      </div>
+      <div class="feat">
+        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+        <h3>智能去重 · 双语界面</h3>
+        <p>以内容哈希识别重复文件，自动合并为一条记录共享结果；界面中英文一键切换。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 场景与痛点 ============ -->
   <section class="block" id="pain">
     <h2 class="title">这些场景，你是不是很熟？</h2>
     <p class="lead">密码忘了不代表文件没了。PassGone 的功能清单，就是按这些痛点长出来的。</p>
@@ -112,72 +219,6 @@
     <div class="shot">界面截图 · 商店上架后更新</div>
   </section>
 
-  <!-- ============ 功能 ============ -->
-  <section class="block" id="features">
-    <h2 class="title">为「找回来」而生的完整引擎</h2>
-    <p class="lead">字典、规则、并行、断点——四种手段对付同一个忘掉的密码，直到把它找回来。</p>
-    <div class="feat-grid">
-      <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>完全离线</h3>
-        <p>零联网、零账号、零遥测——隐私不是承诺，是架构。你添加的文件始终留在你自己的电脑上。</p>
-      </div>
-      <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
-        <h3>全格式覆盖</h3>
-        <p>docx / xlsx / pptx 与旧版 doc / xls / ppt、PDF（RC4 与 AES 全系），以及 zip / 7z / rar 压缩包。</p>
-      </div>
-      <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
-        <h3>字典 + 规则双引擎</h3>
-        <p>txt / csv 字典导入自动去重合并；字符集 × 长度区间规则生成，两种思路都能试。</p>
-      </div>
-      <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
-        <h3>断点续跑</h3>
-        <p>按文件指纹记录区块粒度进度，重启后自动续跑，绝不重复尝试。</p>
-      </div>
-      <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>多核并行 · GPU 加速</h3>
-        <p>CPU 多进程并行 + 可选 hashcat GPU 后端，Office 全格式数十倍提速，实时显示速度与预计剩余。</p>
-      </div>
-      <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
-        <h3>智能去重</h3>
-        <p>以内容哈希识别重复文件，自动合并为一条记录共享结果；界面中英双语一键切换。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 支持格式 ============ -->
-  <section class="block" id="formats">
-    <h2 class="title">支持的格式与加密算法</h2>
-    <p class="lead">从 Office 新旧两代加密到 PDF 全系标准，再到常见压缩包，一个工具全覆盖。</p>
-    <div class="fmt-grid">
-      <div class="fmt">
-        <h3>Office 新版</h3>
-        <p><code>docx / xlsx / pptx</code></p>
-        <p class="algo">Agile 加密（Word / WPS 标准导出）</p>
-      </div>
-      <div class="fmt">
-        <h3>Office 旧版</h3>
-        <p><code>doc / xls / ppt</code></p>
-        <p class="algo">RC4 CryptoAPI</p>
-      </div>
-      <div class="fmt">
-        <h3>PDF</h3>
-        <p>RC4-40、AES-128（R2/R4）、AES-256（R6）</p>
-        <p class="algo">全系加密标准</p>
-      </div>
-      <div class="fmt">
-        <h3>压缩包</h3>
-        <p><code>zip / 7z / rar</code></p>
-        <p class="algo">zip（ZipCrypto / AES）· rar 需自备 UnRAR 后端</p>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ 版本对比 ============ -->
   <section class="block" id="compare">
     <h2 class="title">免费版先找回短的，完整版解除封印</h2>
@@ -198,7 +239,7 @@
     <p class="table-note">* 完整版在微软商店内以附加组件形式购买，价格以商店页面为准。</p>
     <div class="btn-row" style="margin-top:22px">
       <a class="btn btn-primary" href="https://apps.microsoft.com/detail/9PNQWBH3W67T">获取完整版</a>
-      <a class="btn btn-ghost" href="#pain" style="border-color:var(--line);color:var(--accent)">再看看功能</a>
+      <a class="btn btn-ghost" href="#speed" style="border-color:var(--line);color:var(--accent)">再看一眼速度</a>
     </div>
   </section>
 
@@ -237,8 +278,9 @@
       <div>
         <h4>产品</h4>
         <ul>
-          <li><a href="#features">功能特性</a></li>
           <li><a href="#formats">支持格式</a></li>
+          <li><a href="#speed">GPU 实测提速</a></li>
+          <li><a href="#features">功能特性</a></li>
           <li><a href="#compare">版本对比</a></li>
           <li><a href="https://apps.microsoft.com/detail/9PNQWBH3W67T">微软商店</a></li>
         </ul>

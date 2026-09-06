@@ -41,13 +41,37 @@
 /en/                  English（lang=en）
 /privacy/             隐私政策（中英同页切换，内容来自应用 PRIVACY.md，未增删事实）
 /assets/style.css     全站样式（ExifMate 版式骨架 + PassGone 配色）
-/assets/img/          logo.png（512，og:image）、donate_qr.jpg（应用内同款收款码）
-/favicon.ico|.png、/apple-touch-icon.png   全部由 app_icon.png 512 派生
+/assets/img/          logo.png（320，og:image）、donate_qr.jpg（应用内同款收款码）
+/favicon.ico|.png、/apple-touch-icon.png   全部由应用图标 512 派生
 /robots.txt /sitemap.xml /_headers /.well-known/security.txt
 ```
 
-主站信息架构（锚点）：痛点 `#pain` → 功能 `#features` → 支持格式 `#formats` →
-版本对比 `#compare` → 使用条款（警示框）→ 赞助（收款码弹层）→ 页脚（联系邮箱、商店、隐私）。
+主站信息架构（锚点，v1.1.0 起「格式多、速度快」前置，场景痛点后置）：
+**支持格式 `#formats`（10 种格式图标芯片）→ GPU 提速 `#speed`（3 张统计卡 + 实测对比表）→
+功能 `#features`（2×2）→ 为什么需要 `#pain`（6 卡 + 截图占位）→ 版本对比 `#compare` →
+使用条款（警示框）→ 赞助（收款码弹层）→ 页脚**。
+
+### 3.1 实测速度数据（权威口径，逐字使用，禁止改数）
+
+来源：作者 2026-09-06 提供的实测数据。测试环境：ThinkPad T14P Gen3 ·
+Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T。
+
+| 来源 | 格式/加密类型 | CPU 平均 | GPU 平均 | 提升 |
+|---|---|---|---|---|
+| WPS 2016 Pro | doc（97-2003 RC4） | 64,135/s | 48,000,000/s | ≈748× |
+| WPS 2016 Pro | docx（标准加密） | 890/s | 32,353/s | ≈36× |
+| WinRAR 7.11 | RAR（RAR5） | 2,100/s | 10,760/s | ≈5× |
+| WinRAR 7.11 | zip 新版（WinZip AES） | 75,477/s | 770,000/s | ≈10× |
+| WinRAR | zip 旧版（ZipCrypto） | 74,896/s | 200,000,000/s | ≈2,670× |
+| Word 2024 | doc（97-2003 RC4） | 72,333/s | 20,800,000/s | ≈288× |
+| Word 2024 | docx（Agile 2013+） | 639/s | 1,374/s | ≈2.2× |
+
+备注（原文）：加密越轻（RC4/ZipCrypto 这类无重迭代的设计）GPU 并行收益越大（数百到数千倍）；
+带重迭代 KDF 的格式（Agile SHA512-10 万轮、RAR5 PBKDF2）GPU 收益约为 2-36×，但依然全面快于 CPU。
+
+**宣传数字口径决定**：用户口述「约 2800 倍 / 2.1 亿次每秒」与上表（≈2,670× /
+200,000,000/s）存在小幅出入；为保证首页宣传数字与所列实测表自洽，站点统一采用
+**表内口径：最高 ≈2,670×、200,000,000/s（2 亿次/秒）**。如口述数字另有测量依据，经用户确认后全局替换。
 
 JSON-LD：`SoftwareApplication`（version 1.0.1，SecurityApplication，offers ¥0）。
 
@@ -72,3 +96,4 @@ JSON-LD：`SoftwareApplication`（version 1.0.1，SecurityApplication，offers �
 | 日期 | 版本 | 说明 |
 |---|---|---|
 | 2026-09-06 | site v1.0.0 | 首版：中文主站、英文版、隐私政策、全套图标与配套文件 |
+| 2026-09-06 | site v1.1.0 | 卖点前置：格式芯片墙 + GPU 实测速度节（含实测表）；痛点场景后置；功能改 2×2 |
