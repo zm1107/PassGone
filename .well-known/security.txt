@@ -1,0 +1,4 @@
+Contact: mailto:passgone@exifmate.com
+Expires: 2027-06-30T00:00:00.000Z
+Preferred-Languages: zh, en
+Canonical: https://passgone.exifmate.com/.well-known/security.txt

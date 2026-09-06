@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="128x128" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="canonical" href="https://passgone.exifmate.com/privacy/">
+<meta property="og:image" content="https://passgone.exifmate.com/assets/img/logo.png">
+<meta name="description" content="PassGone 隐私政策 / Privacy Policy — 完全离线的文档密码找回工具">
+<title>PassGone 隐私政策 / Privacy Policy</title>
+<style>
+  :root { --ink:#1b2340; --sub:#5a6472; --line:#e2e6ee; --bg:#f5f7fb; --accent:#17569b; --accent-deep:#14357f; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:0; color:var(--ink);
+         font-family:"Microsoft YaHei UI","Segoe UI",system-ui,-apple-system,sans-serif;
+         background:var(--bg); line-height:1.75; font-size:15px; }
+  .page { max-width:860px; margin:0 auto; padding:40px 28px 64px; }
+  header { border-bottom:3px solid var(--accent); padding-bottom:18px; margin-bottom:26px; }
+  header h1 { margin:0 0 6px; font-size:26px; }
+  header .date { color:var(--sub); font-size:14px; }
+  .langs { margin:0 0 26px; }
+  .langs a { display:inline-block; padding:5px 16px; margin-right:8px; border:1px solid var(--line);
+             border-radius:18px; text-decoration:none; color:var(--accent); background:#fff; font-size:14px; }
+  .langs a:hover { background:#eef2f9; }
+  .pledge { background:#eef6ef; border:1px solid #cfe6d2; border-left:4px solid #3d8b4f;
+            border-radius:6px; padding:14px 18px; margin:0 0 26px; }
+  .pledge strong { color:#2f6e3e; }
+  section { background:#fff; border:1px solid var(--line); border-radius:8px;
+            padding:22px 26px; margin-bottom:18px; }
+  section h2 { font-size:18px; margin:0 0 12px; color:var(--accent-deep); }
+  table { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+  th, td { border:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top; }
+  th { background:#eef2f9; }
+  ul { padding-left:22px; margin:8px 0; }
+  li { margin:3px 0; }
+  code { background:#eef2f9; border-radius:3px; padding:1px 6px; font-size:13.5px; }
+  .contact { font-size:16px; }
+  footer { text-align:center; color:var(--sub); font-size:13px; margin-top:30px; }
+  .en { display:none; }
+  html[data-lang="en"] .zh { display:none; }
+  html[data-lang="en"] .en { display:block; }
+  html[data-lang="zh"] .en { display:none; }
+  html[data-lang="zh"] .zh { display:block; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <p style="margin:0 0 10px;font-size:14px"><a href="/">&larr; 返回 PassGone 首页</a> &nbsp;·&nbsp; <a href="/en/" lang="en">Home</a></p>
+  <h1>PassGone 隐私政策</h1>
+  <div class="date">生效日期：2026 年 9 月 6 日 &nbsp;·&nbsp; Effective date: September 6, 2026</div>
+</header>
+
+<nav class="langs">
+  <a href="#zh" onclick="document.documentElement.dataset.lang='zh'">中文</a>
+  <a href="#en" onclick="document.documentElement.dataset.lang='en'">English</a>
+</nav>
+
+<!-- ==================== 中文 ==================== -->
+<div class="zh" id="zh">
+
+<div class="pledge">
+  <strong>核心承诺：</strong>PassGone <strong>完全离线运行，零联网、零账号、零遥测。</strong>你的文件与隐私留在你自己的电脑上。
+</div>
+
+<section>
+<h2>1. 我们收集什么</h2>
+<p><strong>什么都不收集。</strong>PassGone 不包含任何联网代码、账号体系、统计埋点或崩溃上报。
+应用不会读取与你所添加文件无关的任何数据。</p>
+</section>
+
+<section>
+<h2>2. 数据存放在哪里</h2>
+<table>
+  <tr><th>数据</th><th>位置</th><th>说明</th></tr>
+  <tr><td>应用设置</td><td><code>%LOCALAPPDATA%\PassGone\config.json</code>（商店版）/ 程序目录（便携版）</td><td>界面选项</td></tr>
+  <tr><td>找回进度与结果</td><td><code>%LOCALAPPDATA%\PassGone\cache\cache.json</code>（商店版）/ 程序目录 cache\（便携版）</td><td>以文件哈希为键的进度记录（最多 100 条，免费版 2 条）</td></tr>
+  <tr><td>找回结果备份</td><td>同上目录 <code>found_passwords.txt</code></td><td>成功找回的密码追加记录</td></tr>
+</table>
+<p>这些数据<strong>只存在于你的电脑</strong>，卸载应用或手动删除文件即彻底清除。</p>
+</section>
+
+<section>
+<h2>3. 文件会离开你的电脑吗</h2>
+<p>不会。所有计算（哈希、口令校验）均在本机 CPU / GPU 上完成。
+可选的 GPU 加速组件（hashcat）同样完全本地运行，由用户自行提供。</p>
+</section>
+
+<section>
+<h2>4. 微软商店许可</h2>
+<p>使用微软商店版时，购买与授权状态由微软商店基础设施管理，
+PassGone 仅读取本机的许可状态用于解锁完整版功能，不传输任何内容。</p>
+</section>
+
+<section>
+<h2>5. 未成年人</h2>
+<p>本软件不面向未成年人提供任何服务，也不收集任何年龄信息。</p>
+</section>
+
+<section>
+<h2>6. 联系我们</h2>
+<p class="contact">如有隐私相关问题，请通过微软商店页面提供的支持渠道联系开发者；也可写信到
+<a href="mailto:passgone@exifmate.com">passgone@exifmate.com</a>。</p>
+</section>
+
+<section>
+<h2>7. 关于本网站</h2>
+<p>本网站为纯静态 HTML 页面：不含统计分析、行为追踪、Cookie 或任何表单，
+除字体与图标外不向任何第三方服务器发起请求（页面内的外部链接仅在<strong>你主动点击</strong>时才会跳转）。
+网站不记录、不存储任何访问者信息。</p>
+</section>
+
+</div>
+
+<!-- ==================== English ==================== -->
+<div class="en" id="en">
+
+<div class="pledge">
+  <strong>Our core promise:</strong> PassGone runs <strong>fully offline: no network access, no accounts, no telemetry.</strong>
+</div>
+
+<section>
+<h2>1. What We Collect</h2>
+<p><strong>Nothing.</strong> The app contains no networking code, analytics, or crash reporting,
+and never reads anything unrelated to the files you add.</p>
+</section>
+
+<section>
+<h2>2. Where Data Lives</h2>
+<table>
+  <tr><th>Data</th><th>Location</th><th>Notes</th></tr>
+  <tr><td>App settings</td><td><code>%LOCALAPPDATA%\PassGone\config.json</code> (Store build) / app folder (portable)</td><td>UI options</td></tr>
+  <tr><td>Recovery progress &amp; results</td><td><code>%LOCALAPPDATA%\PassGone\cache\cache.json</code> (Store build) / app-folder cache\ (portable)</td><td>Progress keyed by file hash (up to 100 records; 2 in the Free edition)</td></tr>
+  <tr><td>Recovered-password backup</td><td><code>found_passwords.txt</code> in the same folder</td><td>Append-only record of recovered passwords</td></tr>
+</table>
+<p>This data <strong>exists only on your computer</strong>; uninstalling the app or deleting the files erases it completely.</p>
+</section>
+
+<section>
+<h2>3. Do Files Ever Leave Your Computer</h2>
+<p>No. All computation (hashing, password verification) happens on your local CPU / GPU.
+The optional GPU acceleration component (hashcat) also runs entirely locally and is user-supplied.</p>
+</section>
+
+<section>
+<h2>4. Microsoft Store Licensing</h2>
+<p>In the Microsoft Store build, purchases and license state are managed by Microsoft Store
+infrastructure; PassGone only reads the local license state to unlock the Full edition and transmits nothing.</p>
+</section>
+
+<section>
+<h2>5. Minors</h2>
+<p>This software offers no services directed at minors and collects no age information.</p>
+</section>
+
+<section>
+<h2>6. Contact</h2>
+<p class="contact">For privacy questions, reach the developer via the support channel on the Microsoft
+Store listing, or write to <a href="mailto:passgone@exifmate.com">passgone@exifmate.com</a>.</p>
+</section>
+
+<section>
+<h2>7. About This Website</h2>
+<p>This website is a set of purely static HTML pages: no analytics, no behavioral tracking, no cookies,
+no forms, and no third-party requests beyond self-hosted fonts and icons (external links open only when
+<strong>you click them</strong>). The site records and stores nothing about its visitors.</p>
+</section>
+
+</div>
+
+<footer>© 2026 PassGone · 本页面为 PassGone 官方隐私政策 / Official privacy policy of PassGone</footer>
+</div>
+</body>
+</html>

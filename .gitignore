@@ -216,3 +216,26 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# --- Website repo additions ---
+# OS junk / user traces
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+*.stackdump
+
+# Editor / tool local state
+.idea/
+.vscode/
+*.swp
+
+# Local server / logs
+*.log
+nohup.out
+
+# Never commit secrets or local env
+.env*
+*.pem
+*.key
+wrangler.toml
