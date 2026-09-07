@@ -56,18 +56,19 @@
 
 ### 3.1 实测速度数据（权威口径，逐字使用，禁止改数）
 
-来源：作者 2026-09-06 提供的实测数据。测试环境：ThinkPad T14P Gen3 ·
-Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T。
+来源：作者 2026-09-06 提供的实测数据（2026-09-07 修订：WPS RC4 行格式写全为
+doc / xls / ppt；「Word 2024」更名为「Office 2024 Pro」，两行格式写全）。
+测试环境：ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T。
 
 | 来源 | 格式/加密类型 | CPU 平均 | GPU 平均 | 提升 |
 |---|---|---|---|---|
-| WPS 2016 Pro | doc（97-2003 RC4） | 64,135/s | 48,000,000/s | ≈748× |
+| WPS 2016 Pro | doc / xls / ppt（97-2003 RC4） | 64,135/s | 48,000,000/s | ≈748× |
 | WPS 2016 Pro | docx（标准加密） | 890/s | 32,353/s | ≈36× |
 | WinRAR 7.11 | RAR（RAR5） | 2,100/s | 10,760/s | ≈5× |
 | WinRAR 7.11 | zip 新版（WinZip AES） | 75,477/s | 770,000/s | ≈10× |
 | WinRAR | zip 旧版（ZipCrypto） | 74,896/s | 200,000,000/s | ≈2,670× |
-| Word 2024 | doc（97-2003 RC4） | 72,333/s | 20,800,000/s | ≈288× |
-| Word 2024 | docx（Agile 2013+） | 639/s | 1,374/s | ≈2.2× |
+| Office 2024 Pro | doc / xls / ppt（97-2003 RC4） | 72,333/s | 20,800,000/s | ≈288× |
+| Office 2024 Pro | docx / xlsx / pptx（Agile 2013+） | 639/s | 1,374/s | ≈2.2× |
 
 备注（原文）：加密越轻（RC4/ZipCrypto 这类无重迭代的设计）GPU 并行收益越大（数百到数千倍）；
 带重迭代 KDF 的格式（Agile SHA512-10 万轮、RAR5 PBKDF2）GPU 收益约为 2-36×，但依然全面快于 CPU。
@@ -102,5 +103,6 @@ JSON-LD：`SoftwareApplication`（version 1.0.1，SecurityApplication，offers �
 | 2026-09-06 | v1.0.0 | 首版：中文主站、英文版、隐私政策、全套图标与配套文件 |
 | 2026-09-06 | v1.1.0 | 卖点前置：格式芯片墙 + GPU 实测速度节（含实测表）；痛点场景后置；功能改 2×2 |
 | 2026-09-07 | v1.1.1 | README 重构为产品门面；新增仓库约束 AGENTS.md；历史提交信息改写为纯版本号（站点文件无变化） |
+| 2026-09-07 | v1.1.2 | 实测表口径修订：WPS RC4 行格式写全为 doc / xls / ppt；Word 2024 更名 Office 2024 Pro 并写全两行格式 |
 
 > 注：自 v1.1.1 起，提交信息仅含版本号，改动说明只记录于本表。

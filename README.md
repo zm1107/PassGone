@@ -33,13 +33,13 @@
 
 | 来源 | 格式 / 加密类型 | CPU 计算（平均） | GPU 计算（平均） | 提升 |
 |---|---|---|---|---|
-| WPS 2016 Pro | doc（97-2003 RC4） | 64,135/s | 48,000,000/s | ≈748× |
+| WPS 2016 Pro | doc / xls / ppt（97-2003 RC4） | 64,135/s | 48,000,000/s | ≈748× |
 | WPS 2016 Pro | docx（标准加密） | 890/s | 32,353/s | ≈36× |
 | WinRAR 7.11 | RAR（RAR5） | 2,100/s | 10,760/s | ≈5× |
 | WinRAR 7.11 | zip 新版（WinZip AES） | 75,477/s | 770,000/s | ≈10× |
 | WinRAR | zip 旧版（ZipCrypto） | 74,896/s | 200,000,000/s | ≈2,670× |
-| Word 2024 | doc（97-2003 RC4） | 72,333/s | 20,800,000/s | ≈288× |
-| Word 2024 | docx（Agile 2013+） | 639/s | 1,374/s | ≈2.2× |
+| Office 2024 Pro | doc / xls / ppt（97-2003 RC4） | 72,333/s | 20,800,000/s | ≈288× |
+| Office 2024 Pro | docx / xlsx / pptx（Agile 2013+） | 639/s | 1,374/s | ≈2.2× |
 
 > 测试环境：ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T。
 > 加密越轻（RC4 / ZipCrypto 这类无重迭代的设计），GPU 并行收益越大（数百到数千倍）；带重迭代 KDF 的格式（Agile SHA512-10 万轮、RAR5 PBKDF2）GPU 收益约为 2-36×，但依然全面快于 CPU。
