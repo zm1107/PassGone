@@ -63,7 +63,7 @@ doc / xls / ppt；「Word 2024」更名为「Office 2024 Pro」，两行格式�
 | 来源 | 格式/加密类型 | CPU 平均 | GPU 平均 | 提升 |
 |---|---|---|---|---|
 | WPS 2016 Pro | doc / xls / ppt（97-2003 RC4） | 64,135/s | 48,000,000/s | ≈748× |
-| WPS 2016 Pro | docx（标准加密） | 890/s | 32,353/s | ≈36× |
+| WPS 2016 Pro | docx / xlsx / pptx（标准加密） | 890/s | 32,353/s | ≈36× |
 | WinRAR 7.11 | RAR（RAR5） | 2,100/s | 10,760/s | ≈5× |
 | WinRAR 7.11 | zip 新版（WinZip AES） | 75,477/s | 770,000/s | ≈10× |
 | WinRAR | zip 旧版（ZipCrypto） | 74,896/s | 200,000,000/s | ≈2,670× |
@@ -104,5 +104,6 @@ JSON-LD：`SoftwareApplication`（version 1.0.1，SecurityApplication，offers �
 | 2026-09-06 | v1.1.0 | 卖点前置：格式芯片墙 + GPU 实测速度节（含实测表）；痛点场景后置；功能改 2×2 |
 | 2026-09-07 | v1.1.1 | README 重构为产品门面；新增仓库约束 AGENTS.md；历史提交信息改写为纯版本号（站点文件无变化） |
 | 2026-09-07 | v1.1.2 | 实测表口径修订：WPS RC4 行格式写全为 doc / xls / ppt；Word 2024 更名 Office 2024 Pro 并写全两行格式 |
+| 2026-09-07 | v1.1.3 | 实测表口径修订：WPS 标准加密行写全为 docx / xlsx / pptx |
 
 > 注：自 v1.1.1 起，提交信息仅含版本号，改动说明只记录于本表。
