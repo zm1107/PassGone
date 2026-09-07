@@ -6,12 +6,12 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="PassGone — a fully offline password recovery tool for Windows. 10 formats: every version of Office, PDF, and zip/7z/rar; GPU benchmarked up to ≈2,670× faster, 200 million attempts/sec on legacy zip.">
+<meta name="description" content="PassGone — a fully offline password recovery tool for Windows. 10 formats: every version of Office, PDF, and zip/7z/rar; GPU benchmarked up to 15,832× faster, peak over 1 billion attempts/sec.">
 <meta property="og:title" content="PassGone — Forgotten password, recovered file">
-<meta property="og:description" content="10 formats · GPU benchmarked up to ≈2,670× · 200,000,000 attempts/sec on legacy zip. Fully offline password recovery for Office / PDF / archives.">
+<meta property="og:description" content="10 formats · GPU benchmarked up to ≈15,832× · peak over 1 billion attempts/sec. Fully offline password recovery for Office / PDF / archives.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://passgone.exifmate.com/en/">
-<title>PassGone — Document Password Recovery | 10 Formats · GPU up to ≈2,670×</title>
+<title>PassGone — Document Password Recovery | 10 Formats · GPU up to ≈15,832×</title>
 <link rel="canonical" href="https://passgone.exifmate.com/en/">
 <link rel="alternate" hreflang="zh-CN" href="https://passgone.exifmate.com/">
 <link rel="alternate" hreflang="en" href="https://passgone.exifmate.com/en/">
@@ -36,8 +36,8 @@
     <a class="brand" href="/en/"><img src="/assets/img/logo.png" alt="PassGone">Pass<span class="dot">Gone</span></a>
     <div class="nav-links">
       <a class="hide-sm" href="#formats">Formats</a>
-      <a class="hide-sm" href="#speed">GPU Speed</a>
       <a class="hide-sm" href="#features">Features</a>
+      <a class="hide-sm" href="#speed">GPU Speed</a>
       <a class="hide-sm" href="#pain">Scenarios</a>
       <a class="hide-sm" href="#compare">Editions</a>
       <span class="lang-switch"><a href="/" hreflang="zh-CN" lang="zh-CN">中文</a> · <b>English</b></span>
@@ -49,12 +49,12 @@
   <div class="container">
     <img class="hero-logo" src="/assets/img/logo.png" alt="PassGone">
     <h1>The password is gone.<br>The <span class="key">file</span> comes back.</h1>
-    <p class="pitch">A fully offline password recovery tool: <b>10 formats</b> covered, GPU benchmarked up to <b>≈2,670× faster</b>.</p>
+    <p class="pitch">A fully offline password recovery tool: <b>10 formats</b> covered, GPU benchmarked up to <b>15,832× faster</b>.</p>
     <p class="sub">PassGone runs completely offline — no network access, no data collection. Your files never leave your computer.</p>
     <div class="platform-pills">
       <span class="pill">✔ Windows 10 / 11</span>
       <span class="pill">✔ 10 formats</span>
-      <span class="pill">✔ GPU up to ≈2,670×</span>
+      <span class="pill">✔ GPU up to ≈15,832×</span>
       <span class="pill">✔ English &amp; Chinese UI</span>
     </div>
     <div class="btn-row">
@@ -117,60 +117,79 @@
     </div>
   </section>
 
-  <!-- ============ GPU benchmarks ============ -->
-  <section class="block" id="speed">
-    <h2 class="title">GPU acceleration, measurably fast</h2>
-    <p class="lead">Same laptop, same files — CPU only versus GPU enabled, actually measured. Multi-core CPU as the baseline; one click enables the optional hashcat component.</p>
-    <div class="stat-cards">
-      <div class="stat"><b>≈2,670×</b><span>Highest measured GPU speedup (legacy zip · ZipCrypto)</span></div>
-      <div class="stat"><b>200,000,000/s</b><span>GPU attempts per second on legacy zip (ZipCrypto)</span></div>
-      <div class="stat"><b>10</b><span>supported document &amp; archive formats</span></div>
-    </div>
-    <div class="tbl-wrap">
-    <table class="bench">
-      <thead>
-        <tr><th>Source</th><th>Format / Encryption</th><th class="num">CPU (avg)</th><th class="num col-gpu-h">GPU (avg)</th><th class="num">Speedup</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>WPS 2016 Pro</td><td>doc / xls / ppt (97-2003 RC4)</td><td class="num">64,135/s</td><td class="num col-gpu">48,000,000/s</td><td class="num spd">≈748×</td></tr>
-        <tr><td>WPS 2016 Pro</td><td>docx / xlsx / pptx (standard encryption)</td><td class="num">890/s</td><td class="num col-gpu">32,353/s</td><td class="num spd">≈36×</td></tr>
-        <tr><td>WinRAR 7.11</td><td>RAR (RAR5)</td><td class="num">2,100/s</td><td class="num col-gpu">10,760/s</td><td class="num spd">≈5×</td></tr>
-        <tr><td>WinRAR 7.11</td><td>zip modern (WinZip AES)</td><td class="num">75,477/s</td><td class="num col-gpu">770,000/s</td><td class="num spd">≈10×</td></tr>
-        <tr><td>WinRAR</td><td>zip legacy (ZipCrypto)</td><td class="num">74,896/s</td><td class="num col-gpu">200,000,000/s</td><td class="num spd">≈2,670×</td></tr>
-        <tr><td>Office 2024 Pro</td><td>doc / xls / ppt (97-2003 RC4)</td><td class="num">72,333/s</td><td class="num col-gpu">20,800,000/s</td><td class="num spd">≈288×</td></tr>
-        <tr><td>Office 2024 Pro</td><td>docx / xlsx / pptx (Agile 2013+)</td><td class="num">639/s</td><td class="num col-gpu">1,374/s</td><td class="num spd">≈2.2×</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p class="table-note">Test rig: ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T. Real-world results vary with hardware and files.</p>
-    <div class="bench-note">Lighter encryption (RC4 / ZipCrypto — designs without heavy key-derivation iterations) benefits most from GPU parallelism: hundreds to thousands of times faster. Formats with iterated KDFs (Agile SHA-512 with 100k rounds, RAR5 PBKDF2) gain roughly 2–36×, yet still beat CPU across the board. GPU acceleration relies on the optional, user-supplied hashcat component.</div>
-  </section>
-
   <!-- ============ Features ============ -->
   <section class="block" id="features">
     <h2 class="title">A complete engine built to recover</h2>
     <p class="lead">Dictionaries, rules, parallelism, resumability — several weapons aimed at one forgotten password, until it's back.</p>
-    <div class="feat-grid two">
+    <div class="feat-grid four">
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="ico c1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>Fully offline</h3>
         <p>Zero networking, zero accounts, zero telemetry — privacy isn't a promise, it's the architecture. Files stay on your computer.</p>
       </div>
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <div class="ico c2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
         <h3>Dictionaries + rules</h3>
         <p>Import txt / csv dictionaries with automatic de-duplication and merging; or generate candidates from a character set and length range.</p>
       </div>
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
+        <div class="ico c3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
         <h3>Resumable runs</h3>
         <p>Chunk-level progress keyed by file fingerprint; restart and continue exactly where you left off, never re-trying.</p>
       </div>
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
-        <h3>Smart de-duplication · bilingual UI</h3>
+        <div class="ico c4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+        <h3>Smart de-dup · bilingual UI</h3>
         <p>Content hashing spots duplicate files and merges them into one record sharing the result; UI toggles between English and Chinese.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ GPU benchmarks ============ -->
+  <section class="block" id="speed">
+    <h2 class="title">Full-format benchmark matrix</h2>
+    <p class="lead">10 formats, 17 measured data points — all from the product's real recovery pipeline (not a standalone benchmark).</p>
+    <div class="stat-cards">
+      <div class="stat"><b>≈15,832×</b><span>Highest measured speedup in the matrix (PDF AES-256 R5)</span></div>
+      <div class="stat"><b>1,034,600,000/s</b><span>Peak GPU rate (PDF AES-256 R5 · integrated GPU)</span></div>
+      <div class="stat"><b>10</b><span>formats covered, benchmarked tier by tier</span></div>
+    </div>
+    <div class="tbl-wrap">
+    <table class="bench">
+      <thead>
+        <tr><th>Format</th><th>Encryption</th><th class="num">CPU<span class="th-sub">(Intel Core Ultra 9 285H)</span></th><th class="num col-gpu-h">GPU<span class="th-sub">(Intel Arc 140T iGPU)</span></th><th class="num">GPU speedup</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>docx / xlsx / pptx</td><td>Agile AES-256 (SHA-512 ×100k rounds)</td><td class="num">989/s</td><td class="num col-gpu">2,236/s</td><td class="num spd">2.3×</td></tr>
+        <tr><td>docx / xlsx / pptx</td><td>Standard AES-128 (SHA-1 ×50k rounds, common with WPS)</td><td class="num">1,638/s</td><td class="num col-gpu">64,923/s</td><td class="num spd">40×</td></tr>
+        <tr><td>doc / xls / ppt</td><td>Legacy RC4 (MD5)</td><td class="num">92,594/s</td><td class="num col-gpu">85,764,700/s</td><td class="num spd">926×</td></tr>
+        <tr><td>doc / xls / ppt</td><td>Legacy RC4-40/128 (SHA-1)</td><td class="num">91,053/s</td><td class="num col-gpu">83,095,500/s</td><td class="num spd">912×</td></tr>
+        <tr><td>pdf</td><td>RC4-40 (R2, Acrobat 3)</td><td class="num">69,693/s</td><td class="num col-gpu">95,932,100/s</td><td class="num spd">1,376×</td></tr>
+        <tr><td>pdf</td><td>RC4-128 (R3, Acrobat 5)</td><td class="num">19,453/s</td><td class="num col-gpu">5,181,900/s</td><td class="num spd">266×</td></tr>
+        <tr><td>pdf</td><td>AES-128 (R4, Acrobat 7)</td><td class="num">18,563/s</td><td class="num col-gpu">5,185,600/s</td><td class="num spd">279×</td></tr>
+        <tr><td>pdf</td><td>AES-256 (R5, Acrobat 9)</td><td class="num">65,339/s</td><td class="num col-gpu">1,034,600,000/s</td><td class="num spd">15,832×</td></tr>
+        <tr><td>pdf</td><td>AES-256 (R6, Acrobat X+, strongest)</td><td class="num">1,473/s</td><td class="num col-gpu">4,202/s</td><td class="num spd">2.9×</td></tr>
+        <tr><td>zip</td><td>ZipCrypto (legacy)</td><td class="num">7,291/s</td><td class="num col-gpu">CPU only</td><td class="num">—</td></tr>
+        <tr><td>zip</td><td>WinZip AES-128</td><td class="num">23,794/s</td><td class="num col-gpu">1,275,700/s</td><td class="num spd">54×</td></tr>
+        <tr><td>zip</td><td>WinZip AES-192</td><td class="num">16,773/s</td><td class="num col-gpu">1,226,100/s</td><td class="num spd">73×</td></tr>
+        <tr><td>zip</td><td>WinZip AES-256</td><td class="num">12,427/s</td><td class="num col-gpu">1,224,500/s</td><td class="num spd">98×</td></tr>
+        <tr><td>7z</td><td>AES-256 (LZMA2 compressed)</td><td class="num">1,124/s</td><td class="num col-gpu">3,108/s</td><td class="num spd">2.8×</td></tr>
+        <tr><td>7z</td><td>AES-256 (store-only)</td><td class="num">867/s</td><td class="num col-gpu">2,996/s</td><td class="num spd">3.5×</td></tr>
+        <tr><td>rar</td><td>RAR5 content encryption</td><td class="num">3,058/s</td><td class="num col-gpu">16,447/s</td><td class="num spd">5.4×</td></tr>
+        <tr><td>rar</td><td>RAR5 header encryption (-hp)</td><td class="num">2,909/s</td><td class="num col-gpu">16,671/s</td><td class="num spd">5.7×</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="table-note">* Legacy Office verification reads only a fixed-length header, so speed is size-independent.</p>
+    <div class="bench-note">
+      <p><b>Test rig</b>: ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · Intel Arc 140T iGPU · hashcat v7.1.2 · Python 3.13</p>
+    </div>
+    <div class="bench-note">
+      <p><b>Test notes</b></p>
+      <p>① Recovery speed is decided by the key-derivation algorithm, not the cipher — both AES-256, yet PDF R5 vs R6 differ by 240,000×.</p>
+      <p>② GPU speedups typically run 30–1,000×; measured on an iGPU only — a high-end discrete GPU would deliver a far greater boost.</p>
+      <p>③ Office/PDF/RAR/7z speeds are size-independent; ZipCrypto slows as files grow; 7z is slow due to its 524k-round key derivation, not size.</p>
+      <p>④ ZipCrypto currently runs on the CPU path only — GPU verification risks false positives, and accuracy comes first.</p>
     </div>
   </section>
 
@@ -207,7 +226,7 @@
         <div class="scene">CPU too slow to wait</div>
         <h3>Strong encryption grinds a CPU down</h3>
         <p>Modern Office encryption uses high iteration counts; a CPU alone tries too few per second.</p>
-        <p class="fix">Enable GPU acceleration with one click (optional hashcat component) — up to tens of times faster on all Office formats.</p>
+        <p class="fix">Enable GPU acceleration with one click (optional hashcat component) — measured speedups from 2.3× to 15,832× across formats.</p>
       </div>
       <div class="pain-card">
         <div class="scene">The same file copied around</div>
@@ -278,8 +297,8 @@
         <h4>Product</h4>
         <ul>
           <li><a href="#formats">Formats</a></li>
-          <li><a href="#speed">GPU benchmarks</a></li>
           <li><a href="#features">Features</a></li>
+          <li><a href="#speed">GPU benchmarks</a></li>
           <li><a href="#compare">Editions</a></li>
           <li><a href="https://apps.microsoft.com/detail/9PNQWBH3W67T">Microsoft Store</a></li>
         </ul>

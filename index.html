@@ -6,12 +6,12 @@
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" type="image/png" sizes="128x128" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="description" content="PassGone — 完全离线的文档密码找回工具（Windows）。10 种格式：Office 全版本、PDF 与 zip/7z/rar；GPU 实测最高提速约 2,670 倍，旧版 zip 每秒尝试 2 亿次。">
+<meta name="description" content="PassGone — 完全离线的文档密码找回工具（Windows）。10 种格式：Office 全版本、PDF 与 zip/7z/rar；GPU 实测提速最高 15,832 倍，峰值超 10 亿次/秒。">
 <meta property="og:title" content="PassGone — 忘掉的是密码，找回来的是文件">
-<meta property="og:description" content="10 种格式全覆盖 · GPU 实测最高 ≈2,670× 提速 · 旧版 zip 每秒 2 亿次尝试。完全离线的 Office / PDF / 压缩包密码找回工具。">
+<meta property="og:description" content="10 种格式全覆盖 · GPU 实测最高 ≈15,832× 提速 · 峰值超 10 亿次/秒。完全离线的 Office / PDF / 压缩包密码找回工具。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://passgone.exifmate.com/">
-<title>PassGone — 文档密码找回工具 | 10 种格式 · GPU 提速最高约 2,670 倍</title>
+<title>PassGone — 文档密码找回工具 | 10 种格式 · GPU 实测提速最高 15,832×</title>
 <link rel="canonical" href="https://passgone.exifmate.com/">
 <link rel="alternate" hreflang="zh-CN" href="https://passgone.exifmate.com/">
 <link rel="alternate" hreflang="en" href="https://passgone.exifmate.com/en/">
@@ -36,8 +36,8 @@
     <a class="brand" href="/"><img src="/assets/img/logo.png" alt="PassGone">Pass<span class="dot">Gone</span></a>
     <div class="nav-links">
       <a class="hide-sm" href="#formats">支持格式</a>
-      <a class="hide-sm" href="#speed">GPU 提速</a>
       <a class="hide-sm" href="#features">功能</a>
+      <a class="hide-sm" href="#speed">GPU 提速</a>
       <a class="hide-sm" href="#pain">场景</a>
       <a class="hide-sm" href="#compare">版本对比</a>
       <span class="lang-switch"><b>中文</b> · <a href="/en/" hreflang="en" lang="en">English</a></span>
@@ -49,12 +49,12 @@
   <div class="container">
     <img class="hero-logo" src="/assets/img/logo.png" alt="PassGone">
     <h1>忘掉的是密码，<br>找回来的是<span class="key">文件</span>。</h1>
-    <p class="pitch">完全离线的文档密码找回工具：<b>10 种格式</b>全覆盖，GPU 实测最高提速<b>约 2,670 倍</b>。</p>
-    <p class="sub">PassGone 完全离线运行，不联网、不收集任何信息——你的文件永远不出你的电脑。</p>
+    <p class="pitch">完全离线的文档密码找回工具：<b>10 种格式</b>全覆盖，GPU 实测提速最高<b>15,832 倍</b></p>
+    <p class="sub">PassGone 完全离线运行，不联网、不收集任何信息——你的文件永远不出你的电脑</p>
     <div class="platform-pills">
       <span class="pill">✔ Windows 10 / 11</span>
       <span class="pill">✔ 10 种格式</span>
-      <span class="pill">✔ GPU 最高 ≈2,670×</span>
+      <span class="pill">✔ GPU 最高 ≈15,832×</span>
       <span class="pill">✔ 中英双语界面</span>
     </div>
     <div class="btn-row">
@@ -117,60 +117,79 @@
     </div>
   </section>
 
-  <!-- ============ GPU 实测速度 ============ -->
-  <section class="block" id="speed">
-    <h2 class="title">GPU 加速，快是可量化的</h2>
-    <p class="lead">同一台笔记本、同一批文件，开与不开 GPU 的实测对比。CPU 多核并行打底，一键启用可选组件 hashcat，提速立竿见影。</p>
-    <div class="stat-cards">
-      <div class="stat"><b>≈2,670×</b><span>GPU 实测最高提速（旧版 zip · ZipCrypto）</span></div>
-      <div class="stat"><b>200,000,000/s</b><span>旧版 zip（ZipCrypto）GPU 每秒尝试次数</span></div>
-      <div class="stat"><b>10 种</b><span>支持的文档与压缩包格式</span></div>
-    </div>
-    <div class="tbl-wrap">
-    <table class="bench">
-      <thead>
-        <tr><th>来源</th><th>格式 / 加密类型</th><th class="num">CPU 计算（平均）</th><th class="num col-gpu-h">GPU 计算（平均）</th><th class="num">提升</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>WPS 2016 Pro</td><td>doc / xls / ppt（97-2003 RC4）</td><td class="num">64,135/s</td><td class="num col-gpu">48,000,000/s</td><td class="num spd">≈748×</td></tr>
-        <tr><td>WPS 2016 Pro</td><td>docx / xlsx / pptx（标准加密）</td><td class="num">890/s</td><td class="num col-gpu">32,353/s</td><td class="num spd">≈36×</td></tr>
-        <tr><td>WinRAR 7.11</td><td>RAR（RAR5）</td><td class="num">2,100/s</td><td class="num col-gpu">10,760/s</td><td class="num spd">≈5×</td></tr>
-        <tr><td>WinRAR 7.11</td><td>zip 新版（WinZip AES）</td><td class="num">75,477/s</td><td class="num col-gpu">770,000/s</td><td class="num spd">≈10×</td></tr>
-        <tr><td>WinRAR</td><td>zip 旧版（ZipCrypto）</td><td class="num">74,896/s</td><td class="num col-gpu">200,000,000/s</td><td class="num spd">≈2,670×</td></tr>
-        <tr><td>Office 2024 Pro</td><td>doc / xls / ppt（97-2003 RC4）</td><td class="num">72,333/s</td><td class="num col-gpu">20,800,000/s</td><td class="num spd">≈288×</td></tr>
-        <tr><td>Office 2024 Pro</td><td>docx / xlsx / pptx（Agile 2013+）</td><td class="num">639/s</td><td class="num col-gpu">1,374/s</td><td class="num spd">≈2.2×</td></tr>
-      </tbody>
-    </table>
-    </div>
-    <p class="table-note">测试环境：ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · 64GB 6400MHz · Intel Arc 140T。实测数据因硬件与文件而异。</p>
-    <div class="bench-note">加密越轻（RC4 / ZipCrypto 这类无重迭代的设计），GPU 并行收益越大，可达数百到数千倍；带重迭代 KDF 的格式（Agile SHA512-10 万轮、RAR5 PBKDF2），GPU 收益约为 2-36×，但依然全面快于 CPU。GPU 加速依赖可选组件 hashcat，由用户自行提供。</div>
-  </section>
-
   <!-- ============ 功能 ============ -->
   <section class="block" id="features">
     <h2 class="title">为「找回来」而生的完整引擎</h2>
     <p class="lead">字典、规则、并行、断点——多种手段对付同一个忘掉的密码，直到把它找回来。</p>
-    <div class="feat-grid two">
+    <div class="feat-grid four">
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="ico c1"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3>完全离线</h3>
         <p>零联网、零账号、零遥测——隐私不是承诺，是架构。你添加的文件始终留在你自己的电脑上。</p>
       </div>
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <div class="ico c2"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
         <h3>字典 + 规则双引擎</h3>
         <p>txt / csv 字典导入自动去重合并；字符集 × 长度区间规则生成，两种思路都能试。</p>
       </div>
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
+        <div class="ico c3"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
         <h3>断点续跑</h3>
         <p>按文件指纹记录区块粒度进度，重启后自动续跑，绝不重复尝试。</p>
       </div>
       <div class="feat">
-        <div class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
+        <div class="ico c4"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></div>
         <h3>智能去重 · 双语界面</h3>
         <p>以内容哈希识别重复文件，自动合并为一条记录共享结果；界面中英文一键切换。</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ============ GPU 实测速度 ============ -->
+  <section class="block" id="speed">
+    <h2 class="title">全格式实测速度矩阵</h2>
+    <p class="lead">10 种格式、17 项实测数据，全部来自产品真实破解通道（非独立基准程序）。</p>
+    <div class="stat-cards">
+      <div class="stat"><b>≈15,832×</b><span>全矩阵实测最高提速（PDF AES-256 R5）</span></div>
+      <div class="stat"><b>1,034,600,000/s</b><span>GPU 峰值速度（PDF AES-256 R5 · 核显实测）</span></div>
+      <div class="stat"><b>10 种</b><span>格式全覆盖，逐档实测</span></div>
+    </div>
+    <div class="tbl-wrap">
+    <table class="bench">
+      <thead>
+        <tr><th>格式</th><th>加密方式</th><th class="num">CPU 计算<span class="th-sub">（Intel Ultra 9 285H）</span></th><th class="num col-gpu-h">GPU 计算<span class="th-sub">（Intel Arc 140T 核显）</span></th><th class="num">GPU 加速</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>docx / xlsx / pptx</td><td>Agile AES-256（SHA-512×10 万轮）</td><td class="num">989/s</td><td class="num col-gpu">2,236/s</td><td class="num spd">2.3×</td></tr>
+        <tr><td>docx / xlsx / pptx</td><td>Standard AES-128（SHA-1×5 万轮，WPS 常见）</td><td class="num">1,638/s</td><td class="num col-gpu">64,923/s</td><td class="num spd">40×</td></tr>
+        <tr><td>doc / xls / ppt</td><td>旧式 RC4（MD5）</td><td class="num">92,594/s</td><td class="num col-gpu">85,764,700/s</td><td class="num spd">926×</td></tr>
+        <tr><td>doc / xls / ppt</td><td>旧式 RC4-40/128（SHA-1）</td><td class="num">91,053/s</td><td class="num col-gpu">83,095,500/s</td><td class="num spd">912×</td></tr>
+        <tr><td>pdf</td><td>RC4-40（R2，Acrobat 3）</td><td class="num">69,693/s</td><td class="num col-gpu">95,932,100/s</td><td class="num spd">1,376×</td></tr>
+        <tr><td>pdf</td><td>RC4-128（R3，Acrobat 5）</td><td class="num">19,453/s</td><td class="num col-gpu">5,181,900/s</td><td class="num spd">266×</td></tr>
+        <tr><td>pdf</td><td>AES-128（R4，Acrobat 7）</td><td class="num">18,563/s</td><td class="num col-gpu">5,185,600/s</td><td class="num spd">279×</td></tr>
+        <tr><td>pdf</td><td>AES-256（R5，Acrobat 9）</td><td class="num">65,339/s</td><td class="num col-gpu">1,034,600,000/s</td><td class="num spd">15,832×</td></tr>
+        <tr><td>pdf</td><td>AES-256（R6，Acrobat X+，最强）</td><td class="num">1,473/s</td><td class="num col-gpu">4,202/s</td><td class="num spd">2.9×</td></tr>
+        <tr><td>zip</td><td>ZipCrypto（传统加密）</td><td class="num">7,291/s</td><td class="num col-gpu">仅 CPU</td><td class="num">—</td></tr>
+        <tr><td>zip</td><td>WinZip AES-128</td><td class="num">23,794/s</td><td class="num col-gpu">1,275,700/s</td><td class="num spd">54×</td></tr>
+        <tr><td>zip</td><td>WinZip AES-192</td><td class="num">16,773/s</td><td class="num col-gpu">1,226,100/s</td><td class="num spd">73×</td></tr>
+        <tr><td>zip</td><td>WinZip AES-256</td><td class="num">12,427/s</td><td class="num col-gpu">1,224,500/s</td><td class="num spd">98×</td></tr>
+        <tr><td>7z</td><td>AES-256（LZMA2 压缩）</td><td class="num">1,124/s</td><td class="num col-gpu">3,108/s</td><td class="num spd">2.8×</td></tr>
+        <tr><td>7z</td><td>AES-256（仅存储）</td><td class="num">867/s</td><td class="num col-gpu">2,996/s</td><td class="num spd">3.5×</td></tr>
+        <tr><td>rar</td><td>RAR5 内容加密</td><td class="num">3,058/s</td><td class="num col-gpu">16,447/s</td><td class="num spd">5.4×</td></tr>
+        <tr><td>rar</td><td>RAR5 头加密（-hp）</td><td class="num">2,909/s</td><td class="num col-gpu">16,671/s</td><td class="num spd">5.7×</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="table-note">* 旧式 Office 校验只读取文件头部定长数据，速度与文件大小无关。</p>
+    <div class="bench-note">
+      <p><b>测试环境</b>：ThinkPad T14P Gen3 · Intel Core Ultra 9 285H · Intel Arc 140T 核显 · hashcat v7.1.2 · Python 3.13</p>
+    </div>
+    <div class="bench-note">
+      <p><b>测试说明</b></p>
+      <p>① 破解速度由密钥派生算法决定，而非密码算法本身——同为 AES-256，PDF R5 与 R6 相差 24 万倍。</p>
+      <p>② GPU 加速普遍 30～1,000 倍；本表仅用核显实测，高性能独显会有极大提升。</p>
+      <p>③ Office/PDF/RAR/7z 的速度与文件大小无关；ZipCrypto 随体积增大而变慢；7z 慢是因 52 万轮强密钥派生，与体积无关。</p>
+      <p>④ ZipCrypto 当前仅启用 CPU 通道——GPU 校验存在误判风险，为保证结果准确。</p>
     </div>
   </section>
 
@@ -207,7 +226,7 @@
         <div class="scene">CPU 太慢等不起</div>
         <h3>高强度加密纯 CPU 磨不动</h3>
         <p>Office 新版加密迭代次数高，CPU 单机尝试速度有限。</p>
-        <p class="fix">一键启用 GPU 加速（可选组件 hashcat），Office 全格式数十倍提速。</p>
+        <p class="fix">一键启用 GPU 加速（可选组件 hashcat），全格式实测提速 2.3×～15,832×。</p>
       </div>
       <div class="pain-card">
         <div class="scene">同一份文件复制了多份</div>
@@ -279,8 +298,8 @@
         <h4>产品</h4>
         <ul>
           <li><a href="#formats">支持格式</a></li>
-          <li><a href="#speed">GPU 实测提速</a></li>
           <li><a href="#features">功能特性</a></li>
+          <li><a href="#speed">GPU 实测提速</a></li>
           <li><a href="#compare">版本对比</a></li>
           <li><a href="https://apps.microsoft.com/detail/9PNQWBH3W67T">微软商店</a></li>
         </ul>
