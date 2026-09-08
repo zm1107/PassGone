@@ -21,7 +21,7 @@
 - **产品口径来源**（权威，禁止编造）：PassGone 应用仓库的 `README.md`、`about_content.py`、
   `docs/PRIVACY.md`、`packaging/THIRD_PARTY_NOTICES.md`。应用版本 1.0.1。
 
-## 2. 品牌配色（取自图标 ico/app_icon.png，像素取色）
+## 2. 品牌配色（取自应用仓库图标 store/ico/app_icon.png，像素取色）
 
 | 用途 | 变量 | 值 | 来源 |
 |---|---|---|---|
@@ -151,5 +151,6 @@ JSON-LD：`SoftwareApplication`（version 1.0.1，SecurityApplication，offers �
 | 2026-09-07 | v1.1.2 | 实测表口径修订：WPS RC4 行格式写全为 doc / xls / ppt；Word 2024 更名 Office 2024 Pro 并写全两行格式 |
 | 2026-09-07 | v1.1.3 | 实测表口径修订：WPS 标准加密行写全为 docx / xlsx / pptx |
 | 2026-09-07 | v1.2.0 | 旧 7 行实测表整体作废，上线全格式实测速度矩阵（权威数据 33 行见 §3.1）；站点/README 呈现为 18 行（取 4MB 大档、隐去文件大小列）；宣传数字改为 ≈15,832× / 1,034,600,000/s |
+| 2026-09-08 | v1.3.0 | 口径注释更新：应用图标源新路径 store/ico（应用仓库 store/ 目录归位）；本仓库本地目录将更名为 passgone_website（远程与部署不变） |
 
 > 注：自 v1.1.1 起，提交信息仅含版本号，改动说明只记录于本表。
